@@ -1,0 +1,13 @@
+*.pdb
+*.tga
+*.zip
+*.dat
+timestamp
+towhee_altinp
+towhee_cbmc
+towhee_citations
+towhee_final
+towhee_ostwald
+towhee_stdout
+moltemplate_2015-11-18
+img

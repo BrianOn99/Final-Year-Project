@@ -1,0 +1,7 @@
+    pair_coeff 1 1 lj/cut/coul/long 0.17 3.07
+    pair_coeff 2 2 lj/cut/coul/long 0.0 0.0
+    pair_coeff 3 3 lj/cut/coul/long 0.207 3.775
+    bond_coeff 1 harmonic 386.0 1.425
+    bond_coeff 2 harmonic 553.0 0.945
+    bond_coeff 3 harmonic 260.0 1.526
+    angle_coeff 1 harmonic 55.0 108.5

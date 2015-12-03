@@ -1,0 +1,194 @@
+inputformat
+'Towhee'
+ensemble
+'npt'
+temperature
+200.0d0
+pressure
+101.0d0
+nmolty
+1
+# CHANGE FOR EACH SIMULATION
+nmolectyp
+216
+numboxes
+1
+stepstyle
+'cycles'
+nstep
+1500
+printfreq
+5
+blocksize
+200
+moviefreq
+100000000
+backupfreq
+100000000
+runoutput
+'full'
+pdb_output_freq
+5
+pressurefreq
+10000000
+trmaxdispfreq
+100
+volmaxdispfreq
+100
+potentialstyle
+'internal'
+ffnumber
+1
+ff_filename
+../towhee_ff_OPLS-ua-orig
+# Lennard Jones terms
+classical_potential
+'Lennard-Jones'       
+classical_mixrule
+'Geometric'
+lshift
+.false.
+ltailc
+.false.
+rmin  
+1.0d0 
+rcut  
+10.0d0
+rcutin 
+10.0d0 
+# End Lennard Jones
+# Coulomb terms
+electrostatic_form
+'none'
+# End Coulomb
+linit   
+.true. 
+initboxtype
+'dimensions'
+initstyle
+'coords'
+initlattice
+'none'
+# CHANGE FOR EACH SIMULATION
+initmol
+216
+# CHANGE FOR EACH SIMULATION
+inix iniy iniz
+6 6 6
+# CHANGE FOR EACH SIMULATION
+hmatrix
+36.0d0 0.0d0  0.0d0
+0.0d0  36.0d0 0.0d0
+0.0d0  0.0d0  36.0d0   
+# volume move 
+pmvol     
+0.00d0   
+          pmvlpr
+          1.0d0
+          rmvol
+          5.0d2
+          tavol
+          0.5d0
+# intrabox transfer
+pm1boxcbswap
+0.00d0
+          pm1cbswmt
+          1.0d0 1.0d0
+# Configurational-Bias Partial Molecule Regrowth
+# useless for small molecule
+pmcb
+0.0d0
+          pmcbmt
+          1.0d0
+          pmall
+          0.0d0
+# rotate molecule about a bond
+# useless for ua-methanol
+pmpivot
+0.00d0
+          pmpivmt
+          1.0d0 1.0d0
+# shift a plane of molecules
+pmplane
+0.00d0
+          pmplanebox
+          1.0d0
+          planewidth
+          3.0d0
+# shift a row of molecules
+pmrow
+0.01d0
+          pmrowbox
+          1.0d0
+          rowwidth
+          3.0d0
+# single atom transtaltion
+pmtraat
+0.35d0
+          pmtamt
+          1.0d0 1.0d0
+          rmtraa
+          0.5d0 
+          tatraa
+          0.5d0
+# single molecule transtaltion
+pmtracm
+0.65d0
+          pmtcmt
+          1.0d0 0.0d0
+          rmtrac
+          0.40d0 
+          tatrac
+          0.5d0
+# single molecule rotation
+pmrotate
+1.0d0
+          pmromt  
+          1.0d0 0.0d0
+          rmrot
+          0.35d0
+          tarot
+          0.5d0
+cbmc_analysis
+'normal'
+cbmc_formulation      
+'Martin and Frischknecht 2006'
+cbmc_setting_style
+'Martin and Frischknecht'
+# OPLS-aa propane
+input_style
+'advanced connectivity map'
+# number of atoms in this molecule
+# CHANGE FOR EACH SIMULATION
+nunit
+3
+nmaxcbmc
+3
+lpdbnames
+.false.
+forcefield
+'OPLS-ua'
+charge_assignment
+'manual'
+# Don't use improper, as in lammps opls-aa
+improper_assignment
+'none'
+# determines matching interactions for a given forcefield
+match_style
+'standard'
+unit ntype charge
+1    'CH3-C2' 0.0d0
+vibration
+1
+2 'single'
+unit ntype charge
+2    'CH2sp3' 0.0d0
+vibration
+2
+1 'single'
+3 'single'
+unit ntype charge
+3    'CH3-C2' 0.0d0
+vibration
+1
+2 'single'
